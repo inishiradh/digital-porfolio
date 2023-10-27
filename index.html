@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Porfolio</title>
+</head>
+<body>
+    <header>
+        <div class="header content">
+            <img src="dharshini.jpg" alt="my profile" class="profile-picture">
+            <h1> Dharshini Krishnamoorthy</h1>
+            </div>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="#about">about</a></li>
+            <li> <a href="#education">Education</a></li>
+            <li> <a href="#skills">skills</a></li>
+            
+            <li> <a href="#resume">resume</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="content">
+            <h1> About me</h1>
+            <p>Hello every one I am Dharshini studying III of Bachelor of Computer Applications at Bon secours college for women in Thanjavur</p>
+        </div>
+        </section>
+        <section id="education">
+            <div class="content">
+                <h3>UG</h3>
+                <p>Bachelor of Computer Applications</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="content">
+                <h3>Technical skills</h3>
+                <ol>
+                    <li>c</li>
+                    <li>c++</li>
+                    <li>java</li>
+                    
+                </ol>
+            </div>
+        </section>
+      
+        <section id="resume">
+            <div class="content">
+                <center>
+                    <h1>RESUME</h1>
+                    
+                </center>
+                </div>
+        </section>
+        <footer>
+            <p>
+                <center>
+                &copy;dharshini
+                </center>
+            </p>
+            
+        </footer>
+        <script>
+            document.querySelectorAll('a[href="#"]').forEach(anchor=> {
+                anchor.addEventListener('click',function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if(targetElement){
+                        window.scrollTo ( {
+                            top:targetElement.offsetTop,
+                            behavior:'smooth'
+                        });
+                    }
+                });
+            });
+         </script>
+    </body>
+</html>
